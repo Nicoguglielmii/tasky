@@ -7,6 +7,9 @@ A small, fast, dependency-free to-do list that runs entirely in your browser. No
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+**Live →** [nicoguglielmii.github.io/tasky](https://nicoguglielmii.github.io/tasky/)
+
+
 ## Features
 
 - **Add, complete, and delete tasks** with smooth, lightweight animations
