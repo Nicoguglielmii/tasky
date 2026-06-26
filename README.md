@@ -22,15 +22,14 @@ A small, fast, dependency-free to-do list that runs entirely in your browser. No
 
 ## Demo
 
-> Add a screenshot or GIF here once the app is live, e.g.
-> `![Tasky screenshot](docs/screenshot.png)`
+![Tasky screenshot](docs/screenshot.png)
 
 ## Getting started
 
 Tasky has no dependencies and no build step.
 
 ```bash
-git clone https://github.com/<your-username>/tasky.git
+git clone https://github.com/Nicoguglielmii/tasky.git
 cd tasky
 ```
 
@@ -53,9 +52,11 @@ Then either:
 
 ```
 tasky/
-├── index.html      # Markup and the inline task template
-├── style.css       # Design tokens, layout, and component styles
-├── script.js       # App state, rendering, and event handling
+├── docs/
+│   └── screenshot.png   # App screenshot used in this README
+├── index.html           # Markup and the inline task template
+├── style.css            # Design tokens, layout, and component styles
+├── script.js            # App state, rendering, and event handling
 └── README.md
 ```
 
