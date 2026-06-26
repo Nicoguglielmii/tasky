@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasky — a calm to-do list</title>
+  <meta name="description" content="Tasky, a small and focused to-do list app that keeps your tasks in your browser." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" aria-labelledby="appTitle">
+    <header class="app__header">
+      <p class="app__eyebrow">Today's list</p>
+      <h1 class="app__title" id="appTitle">Tasky</h1>
+    </header>
+
+    <form id="taskForm" class="task-form" autocomplete="off">
+      <label class="visually-hidden" for="taskInput">Add a new task</label>
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="What needs doing?"
+        maxlength="200"
+        required
+      />
+      <button type="submit" class="btn btn--add" aria-label="Add task">
+        <span aria-hidden="true">+</span>
+      </button>
+    </form>
+
+    <div class="filters" role="tablist" aria-label="Filter tasks">
+      <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter-btn" data-filter="active" role="tab" aria-selected="false">Active</button>
+      <button class="filter-btn" data-filter="completed" role="tab" aria-selected="false">Done</button>
+    </div>
+
+    <ul id="taskList" class="task-list" aria-live="polite"></ul>
+
+    <p id="emptyState" class="empty-state" hidden>
+      Nothing here yet. Add your first task above.
+    </p>
+
+    <footer class="app__footer">
+      <span id="itemsLeft" class="items-left">0 tasks left</span>
+      <button id="clearCompleted" class="btn btn--ghost" type="button">
+        Clear completed
+      </button>
+    </footer>
+  </main>
+
+  <template id="taskTemplate">
+    <li class="task" data-id="">
+      <button class="task__check" type="button" aria-pressed="false" aria-label="Mark task complete">
+        <svg viewBox="0 0 24 24" class="task__checkmark" aria-hidden="true">
+          <path d="M5 12.5L9.5 17L19 6.5" />
+        </svg>
+      </button>
+      <span class="task__text" tabindex="0" role="textbox" aria-label="Task text, double-click to edit"></span>
+      <button class="task__delete" type="button" aria-label="Delete task">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6L18 18M18 6L6 18" />
+        </svg>
+      </button>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
